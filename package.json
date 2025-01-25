@@ -74,5 +74,14 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
+  },
+  "dependencies": {
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-phantom": "^0.9.24",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.98.0",
+    "element-plus": "^2.9.3",
+    "sass": "^1.83.4",
+    "webextension-polyfill-ts": "^0.26.0"
   }
 }

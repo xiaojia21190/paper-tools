@@ -23,12 +23,12 @@ export async function getManifest() {
     },
     background: isFirefox
       ? {
-          scripts: ['dist/background/index.mjs'],
-          type: 'module',
-        }
+        scripts: ['dist/background/index.mjs'],
+        type: 'module',
+      }
       : {
-          service_worker: './dist/background/index.mjs',
-        },
+        service_worker: './dist/background/index.mjs',
+      },
     icons: {
       16: './assets/icon-512.png',
       48: './assets/icon-512.png',
@@ -39,16 +39,13 @@ export async function getManifest() {
       'storage',
       'activeTab',
       'sidePanel',
+      'scripting'
     ],
     host_permissions: ['*://*/*'],
     content_scripts: [
       {
-        matches: [
-          '<all_urls>',
-        ],
-        js: [
-          'dist/contentScripts/index.global.js',
-        ],
+        matches: ['<all_urls>'],
+        js: ['dist/contentScripts/index.global.js'],
       },
     ],
     web_accessible_resources: [

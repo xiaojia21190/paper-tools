@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { storageDemo } from '~/logic/storage'
+import { storageDemo } from "~/logic/storage";
+import type { Browser } from "webextension-polyfill-ts";
+declare const browser: Browser;
 
 function openOptionsPage() {
-  browser.runtime.openOptionsPage()
+  browser.runtime.openOptionsPage();
 }
 </script>
 
@@ -12,11 +14,10 @@ function openOptionsPage() {
     <div>Popup</div>
     <SharedSubtitle />
 
-    <button class="btn mt-2" @click="openOptionsPage">
-      Open Options
-    </button>
+    <button class="btn mt-2" @click="openOptionsPage">Open Options</button>
     <div class="mt-2">
-      <span class="opacity-50">Storage:</span> {{ storageDemo }}
+      <span class="opacity-50">Storage:</span>
+      {{ storageDemo }}
     </div>
   </main>
 </template>

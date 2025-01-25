@@ -11,9 +11,7 @@
       "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "types": [
-      "vite/client"
-    ],
+    "types": ["vite/client", "webextension-polyfill-ts", "element-plus/global"],
     "strict": true,
     "noUnusedLocals": true,
     "esModuleInterop": true,
